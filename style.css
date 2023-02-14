@@ -1,0 +1,14 @@
+#items {
+    display: flex;
+}
+
+img {
+    height: 10rem;
+    object-fit: cover;
+}
+
+.qtty {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
