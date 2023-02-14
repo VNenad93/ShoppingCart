@@ -1,5 +1,7 @@
 #items {
     display: flex;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
 img {
@@ -11,4 +13,13 @@ img {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+#cart {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-direction: column;
+    height: 20rem;
+    background-color: rgba(127, 255, 212, 0.452);
 }

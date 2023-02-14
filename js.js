@@ -66,7 +66,7 @@ function total() {
         sum += cart[i].qtty * cart[i].price
     }
 
-    totalSum.textContent = `Total: ${sum}`
+    totalSum.textContent = `Total: ${sum}$`
 }
 
 function renderCart() {
@@ -75,12 +75,12 @@ function renderCart() {
     for (let items of cart) {
         item.innerHTML += `
         <div>
-            <p>${items.name}</p>
+            <h3>${items.name}</h3>
             <div class="qtty">
-                <input type="button" value="+" class="plus">
+                <a class="btn btn-success plus">+</a>
                 <p id="numQtty">${items.qtty}</p>
-                <input type="button" value="-" class="minus">
-                <input type="button" value="X" class="delete">
+                <a class="btn btn-warning minus">-</a>
+                <a class="btn btn-danger delete">X</a>
             </div>
         </div>
         `
@@ -101,6 +101,11 @@ function renderCart() {
     minus.forEach((btn, i) => {
         btn.addEventListener('click', () => {
             cart[i].qtty--
+
+            if (cart[i].qtty == 0) {
+                cart.splice(i, 1)
+            }
+
             total()
             renderCart()
         })
