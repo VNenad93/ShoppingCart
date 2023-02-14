@@ -100,10 +100,11 @@ function renderCart() {
 
     minus.forEach((btn, i) => {
         btn.addEventListener('click', () => {
-            cart[i].qtty--
 
-            if (cart[i].qtty == 0) {
+            if (cart[i].qtty == 1) {
                 cart.splice(i, 1)
+            } else {
+                cart[i].qtty--
             }
 
             total()
@@ -113,10 +114,10 @@ function renderCart() {
 
     deleteBtn.forEach((btn, i) => {
         btn.addEventListener('click', () => {
+            cart[i].qtty = 1
             cart.splice(i, 1)
             total()
             renderCart()
-            console.log(i)
         })
     })
 

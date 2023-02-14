@@ -12,14 +12,12 @@ img {
 .qtty {
     display: flex;
     gap: 1rem;
-    align-items: center;
+    align-items: baseline;
+    margin-bottom: 1rem;
 }
 
 #cart {
-    display: flex;
-    justify-content: space-evenly;
     padding: 1rem;
-    flex-direction: column;
     height: 20rem;
     background-color: rgba(127, 255, 212, 0.452);
 }
